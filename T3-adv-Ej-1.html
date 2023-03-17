@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3-adv-Ej-1. Imágenes</title>
+    <style>
+        /* Con flex-flow: grap; junto max-width conseguimos que un conjunto de 
+           imágenes sea responsive dentro de su contenedor. Es decir, 
+           independientemente del tamaño de la ventana del navegador, las 
+           imágenes se adaptarán a éste */
+
+        .galeria {
+            background: lightgray;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+        }
+
+        .galeria img {
+            max-width: 200px;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="galeria">
+        <img src="img/Acantilados-Moher.jpg" alt="">
+        <img src="img/Cappadocia.jpg" alt="">
+        <img src="img/Delta-Okavango.jpg" alt="">
+        <img src="img/La-Alhambra.jpg" alt="">
+        <img src="img/Acantilados-Moher.jpg" alt="">
+        <img src="img/Cappadocia.jpg" alt="">
+        <img src="img/Delta-Okavango.jpg" alt="">
+        <img src="img/La-Alhambra.jpg" alt="">
+    </div>
+</body>
+
+</html>

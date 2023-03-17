@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7. Coches</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        #contenedor {
+            width: 100%;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul {
+            background-color: white;
+            width: 100%;
+            height: 12%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1em;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            height: 30px;
+        }
+
+        nav ul li:hover{
+            background-color:red;
+            color: white;
+        }
+
+        nav ul li a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 0.5em;
+        }
+
+        nav ul li ul {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li:hover{ 
+            background-color: grey;
+        }
+
+        nav ul #href-coches {
+            justify-self: flex-start;
+        }
+
+        nav ul #href-micuenta {
+            justify-self: flex-end;
+        }
+
+
+        section {
+            width: 100%;
+            height: 88%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #movilidad {
+            width: 100%;
+            height: 35%;
+            background-color: #2C91A7;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .fa-user {
+            background-color: grey;
+            color: white;
+            border-radius: 50%;
+        }
+
+
+        #txt-desata {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        #txt-conduce {
+            color: white;
+            font-size: 0.8em;
+            margin-top: 1em;
+        }
+
+        #nav {
+            margin-top: 0.5em; 
+        }
+
+        #nav ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #nav ul li {
+            list-style-type: none;
+            background-color: lightgray;
+            padding: 10px;
+            border-radius: 10% 10% 0 0;
+            margin-right: 0.5em;
+        }
+
+        #nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            ;
+        }
+
+        #formu {
+            margin-top: 0.5em;
+        }
+        input[type="text"] {
+            width: 70%;
+            clip-path: polygon(0% 10%,
+                  60% 10%,
+                  60% 0%,
+                 100% 30%,
+                  60% 100%,
+                  60% 90%,
+                   0% 90%);
+        }
+
+        input[type="submit"] {
+            background-color: #158849;
+            color: white;
+            font-size: 0.7em;
+            border: none;
+            padding: 0.4em;
+        }
+
+        #fotografia img {
+            max-width: 70%;
+            clip-path: polygon(40% 0%, 100% 0%,  100% 100%, 0% 100%);
+            border-radius: 8%;
+        }
+
+        #imagenes {
+            margin-top: 2em;
+            width: 80%;
+            height: 80%;
+            display: flex;
+            flex-flow: wrap;
+            column-gap: 2em;
+        }
+
+        p.titulo {
+            text-align: center;
+            font-weight: bold;
+            max-width: 100%;
+        }
+
+        p.subtitulo {
+            text-align: center;
+            max-width: 100%;
+
+        }
+
+        .uno, .dos, .tres, .cuatro {
+            border-radius: 10%;
+            box-shadow:  0 0 3px 2px lightgrey; 
+            height: 60%;
+            padding: 1em;
+        }
+
+        .uno:hover, .dos:hover, .tres:hover, .cuatro:hover {
+            box-shadow: 0 0 5px 4px lightgrey; 
+        }    
+
+
+        #imagenes div img {
+            max-width: 100%;
+            border-radius: 10%;
+            margin-top: 0.5em;
+        }
+
+        @media(max-width: 800px) {
+            * {
+                font-size: 11px;
+            }
+
+        }
+
+        @media(max-width: 768px) {
+            * {
+                font-size: 9px;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <nav>
+            <ul>
+                <li id="href-coches"><a href="#">Coches.com</a></li>
+                <li><a href="#">Vender coche</a></li>
+                <li><a href="#">Nuevos</a></li>
+                <li><a href="#">Km 0</a></li>
+                <li><a href="#">Segunda Mano</a>
+                    <ul>
+                        <li><a href="#">Tasador de coches</a></li>
+                        <li><a href="#">Informe DGT</a></li>
+                        <li><a href="#">Transferir coche</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Financiación</a></li>
+                <li><a href="#">Renting</a></li>
+                <li><a href="#">Seguros coche</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li id="href-micuenta" href="#"><i class="fas fa-user"></i>Mi cuenta</li>
+            </ul>
+        </nav>
+        <section>
+            <div id="movilidad">
+                <div id="navegacion">
+                    <div id="txt-desata">Desata tu movilidad</div>
+                    <div id="txt-conduce">Conduce tu futuro, desata tu movilidad con más de 230.000 ofertas</div>
+                    <div id="nav">
+                        <ul>
+                            <li><a href="#">Nuevos</a></li>
+                            <li><a href="#">Km 0</a></li>
+                            <li><a href="#">Segunda mano</a></li>
+                            <li><a href="#">Reting</a></li>
+                        </ul>
+                    </div>
+                    <div id="formu">
+                        <form action="#" method="post">
+                            <input type="text" placeholder="¿ Qué coche estás buscando ?" />
+                            <i class="fa fa-search"></i><input type="submit" value="BUSCAR" />
+                        </form>
+                    </div>
+                </div>
+
+                <div id="fotografia">
+                    <img src="./img/La-Alhambra.jpg" />
+                </div>
+
+            </div>
+            <div id="imagenes">
+                <div class="uno">
+                    <p class="titulo">Financia tu coche</p>
+                    <p class="subtitulo">Conoce tu presupuspuesto en un par<br />
+                        de minutos sin compromiso</p>
+                    <img src="./img/financia-coche.png" />
+                </div>
+                <div class="dos">
+                    <p class="titulo">Anuncia tu coche</p>
+                    <p class="subtitulo">La manera más rápida y sencilla de<br />
+                        vender tu coche</p>
+                    <img src="./img/anuncia-coche.png" />
+                </div>
+                <div class="tres">
+                    <p class="titulo">Transfiere tu coche</p>
+                    <p class="subtitulo">Con Paycar puedes hacerlo 1000%<br />
+                        online</p>
+                    <img src="./img/transfiere-coche.png" />
+                </div>
+                <div class="cuatro">
+                    <p class="titulo">Renting y movilidad</p>
+                    <p class="subtitulo">Consigue tu oferta personalizada</p>
+                    <img src="./img/renting-coche.png" />
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

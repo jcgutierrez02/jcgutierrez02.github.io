@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3-adv-Ej-2. Imágenes en grid</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <style>
+        .galeria {
+            background: lightgray;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: center;
+        }
+
+        .galeria img {
+            max-width: 300px;
+            padding: 1rem;
+        }
+
+        @media screen and (max-width: 900px) {
+            .galeria {
+                background: lightgreen;
+                grid-template-columns: auto auto;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .galeria {
+                background: lightblue;
+                grid-template-columns: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <i class="fas fa-user"></i>
+    <div class="galeria">
+        <img src="img/Acantilados-Moher.jpg" alt="">
+        <img src="img/Cappadocia.jpg" alt="">
+        <img src="img/Delta-Okavango.jpg" alt="">
+        <img src="img/La-Alhambra.jpg" alt="">
+        <img src="img/Acantilados-Moher.jpg" alt="">
+        <img src="img/Cappadocia.jpg" alt="">
+        <img src="img/Delta-Okavango.jpg" alt="">
+        <img src="img/La-Alhambra.jpg" alt="">
+    </div>
+</body>
+
+</html>
