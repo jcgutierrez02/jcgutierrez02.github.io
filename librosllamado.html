@@ -24,7 +24,13 @@
         console.log("Apagada: " + urlParams.get('apagada'));
         console.log("Id: " + urlParams.get('id'));
 
-        fetch('https://www.etnassoft.com/api/v1/get/?category=libros_programacion&criteria=most_viewed')
+        fetch('https://www.etnassoft.com/api/v1/get/?category=libros_programacion&criteria=most_viewed', { 
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': 'https://jcgutierrez02.github.io'
+                }
+            
+            })
             .then(response => response.json())
             .then(function (productos) {
 
