@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibe una serie de parámetros en la URL y los muestra</title>
+</head>
+<body>
+    <script>
+        const valores = window.location.search;
+
+        //Mostramos los valores en consola:
+        console.log(valores);
+
+        //Resultado:
+        //?bombilla=si&apagada=no&id=7
+
+   
+        const urlParams = new URLSearchParams(valores);
+
+        //Accedemos a los valores
+        console.log("Bombilla: " + urlParams.get('bombilla'));
+        console.log("Apagada: " + urlParams.get('apagada'));
+        console.log("Id: " + urlParams.get('id'));
+
+        fetch('https://www.etnassoft.com/api/v1/get/?category=libros_programacion&criteria=most_viewed')
+            .then(response => response.json())
+            .then(function (productos) {
+
+                document.getElementById("salida").innerHTML = productos;
+                          
+                 
+            });        
+
+
+        
+
+    </script>
+</body>
+</html>
