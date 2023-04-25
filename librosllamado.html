@@ -15,8 +15,7 @@
 
         //Resultado:
         //?bombilla=si&apagada=no&id=7
-
-   
+ 
         const urlParams = new URLSearchParams(valores);
 
         //Accedemos a los valores
@@ -25,23 +24,16 @@
         console.log("Id: " + urlParams.get('id'));
 
         fetch('https://www.etnassoft.com/api/v1/get/?category=libros_programacion&criteria=most_viewed', { 
+            method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': 'https://jcgutierrez02.github.io'
                 }
-            
             })
             .then(response => response.json())
             .then(function (productos) {
-
-                document.getElementById("salida").innerHTML = productos;
-                          
-                 
+                document.getElementById("salida").innerHTML = productos;      
             });        
-
-
-        
-
     </script>
 </body>
 </html>
